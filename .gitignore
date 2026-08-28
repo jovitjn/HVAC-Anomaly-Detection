@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+.venv/
+venv/
+.DS_Store
+
+# Raw data and trained weights are intentionally not versioned.
+data/*.csv
+data/*.parquet
+artifacts/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+

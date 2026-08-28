@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hvac-anomaly-detection"
+version = "0.1.0"
+description = "Normal-behavior anomaly detection for multi-zone HVAC data"
+requires-python = ">=3.10"
+dependencies = [
+  "tensorflow-cpu==2.19.0",
+  "numpy==2.1.3",
+  "pandas==2.2.3",
+  "scikit-learn==1.6.1",
+  "matplotlib==3.10.0",
+  "joblib==1.4.2",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+

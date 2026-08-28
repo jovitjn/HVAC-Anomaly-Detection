@@ -1,0 +1,31 @@
+{
+  "excluded_proxy_temperature_features": [
+    "VAV Box: Room 102 Air Temperature",
+    "VAV Box: Room 103 Air Temperature",
+    "VAV Box: Room 104 Air Temperature",
+    "VAV Box: Room 105 Air Temperature",
+    "VAV Box: Room 106 Air Temperature",
+    "VAV Box: Room 202 Air Temperature",
+    "VAV Box: Room 203 Air Temperature",
+    "VAV Box: Room 204 Air Temperature",
+    "VAV Box: Room 205 Air Temperature",
+    "VAV Box: Room 206 Air Temperature"
+  ],
+  "fault_rows": 20161,
+  "gap_segments": 16,
+  "imputation": "forward fill within contiguous periods, then training median",
+  "input_features": 51,
+  "normal_rows": 10079,
+  "rows": 30240,
+  "sequence_length": 4,
+  "split_seed": 42,
+  "split_strategy": "disjoint 60-minute normal blocks for train/calibration/test; all contiguous fault windows held out for evaluation",
+  "targets": 10,
+  "test_end": "2018-02-18 23:59:00",
+  "test_fault_sequences": 20124,
+  "test_normal_sequences": 1371,
+  "test_sequences": 21495,
+  "test_start": "2017-08-27 00:03:00",
+  "train_sequences": 7094,
+  "validation_sequences": 1386
+}

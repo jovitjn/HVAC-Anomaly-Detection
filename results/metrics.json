@@ -1,0 +1,92 @@
+{
+  "baselines": {
+    "Mean reference": {
+      "accuracy": 0.2599209118399628,
+      "balanced_accuracy": 0.5619292769946681,
+      "f1": 0.35312296681847755,
+      "fn": 15782,
+      "fp": 126,
+      "pr_auc": 0.9447776357075923,
+      "precision": 0.9717994628469113,
+      "recall": 0.2157622739018088,
+      "roc_auc": 0.604832152253403,
+      "specificity": 0.9080962800875274,
+      "threshold": 0.5537188053131104,
+      "tn": 1245,
+      "tp": 4342
+    },
+    "Ridge + PCA": {
+      "accuracy": 0.3595719934868574,
+      "balanced_accuracy": 0.6188876775806194,
+      "f1": 0.48465109314165916,
+      "fn": 13651,
+      "fp": 115,
+      "pr_auc": 0.9725037847261757,
+      "precision": 0.9825440194292653,
+      "recall": 0.32165573444643214,
+      "roc_auc": 0.725118851015752,
+      "specificity": 0.9161196207148067,
+      "threshold": 0.6247051954269409,
+      "tn": 1256,
+      "tp": 6473
+    }
+  },
+  "config": {
+    "batch_size": 256,
+    "epochs_completed": 30,
+    "epochs_requested": 30,
+    "prediction_weight": 0.6,
+    "reconstruction_weight": 0.4,
+    "seed": 42,
+    "sequence_length": 4,
+    "threshold_quantile": 0.9
+  },
+  "method": "Shared LSTM",
+  "metrics": {
+    "accuracy": 0.8684345196557339,
+    "balanced_accuracy": 0.8712812074981939,
+    "f1": 0.9251138650566677,
+    "fn": 2656,
+    "fp": 172,
+    "pr_auc": 0.995276776634664,
+    "precision": 0.990249433106576,
+    "recall": 0.8680182866229378,
+    "roc_auc": 0.9434918893088962,
+    "specificity": 0.8745441283734501,
+    "threshold": 0.4814983606338501,
+    "threshold_quantile": 0.9,
+    "tn": 1199,
+    "tp": 17468
+  },
+  "split": {
+    "excluded_proxy_temperature_features": [
+      "VAV Box: Room 102 Air Temperature",
+      "VAV Box: Room 103 Air Temperature",
+      "VAV Box: Room 104 Air Temperature",
+      "VAV Box: Room 105 Air Temperature",
+      "VAV Box: Room 106 Air Temperature",
+      "VAV Box: Room 202 Air Temperature",
+      "VAV Box: Room 203 Air Temperature",
+      "VAV Box: Room 204 Air Temperature",
+      "VAV Box: Room 205 Air Temperature",
+      "VAV Box: Room 206 Air Temperature"
+    ],
+    "fault_rows": 20161,
+    "gap_segments": 16,
+    "imputation": "forward fill within contiguous periods, then training median",
+    "input_features": 51,
+    "normal_rows": 10079,
+    "rows": 30240,
+    "sequence_length": 4,
+    "split_seed": 42,
+    "split_strategy": "disjoint 60-minute normal blocks for train/calibration/test; all contiguous fault windows held out for evaluation",
+    "targets": 10,
+    "test_end": "2018-02-18 23:59:00",
+    "test_fault_sequences": 20124,
+    "test_normal_sequences": 1371,
+    "test_sequences": 21495,
+    "test_start": "2017-08-27 00:03:00",
+    "train_sequences": 7094,
+    "validation_sequences": 1386
+  }
+}
